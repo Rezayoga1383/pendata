@@ -64,7 +64,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Tugas 3 Klasifikasi Naive Bayes Pada Datairis" href="tugas3_NaiveBayes.html" />
-    <link rel="prev" title="Penambangan Data" href="../intro.html" />
+    <link rel="prev" title="Tugas 1 Menarik Data dari Postgree ke Power BI" href="Tugas1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,9 +156,11 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Tugas1.html">Tugas 1 Menarik Data dari Postgree ke Power BI</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tugas Mengukur Jarak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3_NaiveBayes.html">Tugas 3 Klasifikasi Naive Bayes Pada Datairis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS_pendata.html">UTS PENAMBANGAN DATA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Decision_Tree.html">Decision Tree Data Iris</a></li>
 </ul>
 
     </div>
@@ -356,35 +358,28 @@ document.write(`
                   
   <div class="tex2jax_ignore mathjax_ignore section" id="tugas-mengukur-jarak">
 <h1>Tugas Mengukur Jarak<a class="headerlink" href="#tugas-mengukur-jarak" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pandas</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
-Requirement already satisfied: pandas in /usr/local/lib/python3.9/dist-packages (1.4.4)
-Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2022.7.1)
-Requirement already satisfied: python-dateutil&gt;=2.8.1 in /usr/local/lib/python3.9/dist-packages (from pandas) (2.8.2)
-Requirement already satisfied: numpy&gt;=1.18.5 in /usr/local/lib/python3.9/dist-packages (from pandas) (1.22.4)
-Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
-</pre></div>
-</div>
-</div>
-</div>
+<p><strong>Langkah 1 : Mengimport Library</strong></p>
+<p>langkah pertama yaitu kita mengimpor library pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics.pairwise</span> <span class="kn">import</span> <span class="n">pairwise_distances</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://gist.githubusercontent.com/Rezayoga1383/2ccefe0ca9cb007642dbbbcf205c4336/raw/948d775ff62fe0e131d7a48dad54a4ef1008c9d3/data.csv&#39;</span><span class="p">)</span>
-<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Langkah 2 Mengimpor Data</strong></p>
+<p>langkah selanjutnya kita memasukkan data. disini data saya import di GithubGist dengan nama file data.csv lalu kita panggil file tersebut ke dalam code. setelah itu kita akan menampilkan data 5 baris pertama dari data tersebut menggunakan fungsi head(). berikut adalah code dan outputnya.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://gist.githubusercontent.com/Rezayoga1383/2ccefe0ca9cb007642dbbbcf205c4336/raw/948d775ff62fe0e131d7a48dad54a4ef1008c9d3/data.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-bbaf5a53-6c83-4744-8bb3-14a471dc530f">
+  <div id="df-3e47203e-197d-4685-a7dd-dfcc1acaa78f">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -467,7 +462,7 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-bbaf5a53-6c83-4744-8bb3-14a471dc530f')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3e47203e-197d-4685-a7dd-dfcc1acaa78f')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -518,12 +513,12 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 
       <script>
         const buttonEl =
-          document.querySelector('#df-bbaf5a53-6c83-4744-8bb3-14a471dc530f button.colab-df-convert');
+          document.querySelector('#df-3e47203e-197d-4685-a7dd-dfcc1acaa78f button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-bbaf5a53-6c83-4744-8bb3-14a471dc530f');
+          const element = document.querySelector('#df-3e47203e-197d-4685-a7dd-dfcc1acaa78f');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -544,6 +539,8 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
   </div>
   </div></div>
 </div>
+<p><strong>Langkah 3 mengelompokkan fitur dan target</strong></p>
+<p>kita kelompokkan fitur dan target yang ada pada data kita mulai dari jenis kelamin, umur, status, mempunyai anak, dan target jabatan</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Jenis Kelamin&#39;</span><span class="p">,</span> <span class="s1">&#39;Umur&#39;</span><span class="p">,</span> <span class="s1">&#39;Status&#39;</span><span class="p">,</span> <span class="s1">&#39;Mempunyai anak&#39;</span><span class="p">,</span> <span class="s1">&#39;Jabatan&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -556,6 +553,8 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
 </div>
 </div>
 </div>
+<p><strong>langkah 4</strong></p>
+<p>menggunakan metode manhattan untuk menghitung jarak pada setiap fitur dan target pada data tersebut</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dist_matrix</span> <span class="o">=</span> <span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;manhattan&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">pairwise_distances</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">metric</span><span class="o">=</span><span class="s1">&#39;manhattan&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">())</span>
@@ -613,12 +612,12 @@ Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.9/dist-pack
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../intro.html"
+       href="Tugas1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Penambangan Data</p>
+        <p class="prev-next-title">Tugas 1 Menarik Data dari Postgree ke Power BI</p>
       </div>
     </a>
     <a class="right-next"
