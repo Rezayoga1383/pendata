@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; My sample book</title>
+    <title>IMPLEMENTASI PCA &#8212; My sample book</title>
   
   
   
@@ -154,12 +154,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="Tugas1.html">Tugas 1 Menarik Data dari Postgree ke Power BI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mengukur_jarak.html">Tugas Mengukur Jarak</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tugas3_NaiveBayes.html">Tugas 3 Klasifikasi Naive Bayes Pada Datairis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="UTS_pendata.html">UTS PENAMBANGAN DATA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Decision_Tree.html">Decision Tree Data Iris</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">IMPLEMENTASI PCA</a></li>
 </ul>
 
     </div>
@@ -330,9 +331,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -343,19 +342,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>IMPLEMENTASI PCA</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -365,7 +356,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
+  <div class="tex2jax_ignore mathjax_ignore section" id="implementasi-pca">
+<h1>IMPLEMENTASI PCA<a class="headerlink" href="#implementasi-pca" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -392,7 +385,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4724dd72-8997-4ef8-a6e0-ed73f9a598dd">
+  <div id="df-e2507c0b-de2e-49a5-a25d-b13b698aff89">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -512,7 +505,7 @@ document.write(`
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4724dd72-8997-4ef8-a6e0-ed73f9a598dd')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e2507c0b-de2e-49a5-a25d-b13b698aff89')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -563,12 +556,12 @@ document.write(`
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4724dd72-8997-4ef8-a6e0-ed73f9a598dd button.colab-df-convert');
+          document.querySelector('#df-e2507c0b-de2e-49a5-a25d-b13b698aff89 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4724dd72-8997-4ef8-a6e0-ed73f9a598dd');
+          const element = document.querySelector('#df-e2507c0b-de2e-49a5-a25d-b13b698aff89');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -678,7 +671,7 @@ memory usage: 6.0+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-fdfecf7b-5607-4d5e-80a4-d77c123ba9a2">
+  <div id="df-ccdabeb6-d058-4b4c-92b2-29e0f3c4f233">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -798,7 +791,7 @@ memory usage: 6.0+ KB
 </table>
 <p>150 rows × 5 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-fdfecf7b-5607-4d5e-80a4-d77c123ba9a2')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ccdabeb6-d058-4b4c-92b2-29e0f3c4f233')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
         
@@ -849,12 +842,12 @@ memory usage: 6.0+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-fdfecf7b-5607-4d5e-80a4-d77c123ba9a2 button.colab-df-convert');
+          document.querySelector('#df-ccdabeb6-d058-4b4c-92b2-29e0f3c4f233 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-fdfecf7b-5607-4d5e-80a4-d77c123ba9a2');
+          const element = document.querySelector('#df-ccdabeb6-d058-4b4c-92b2-29e0f3c4f233');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -880,6 +873,7 @@ memory usage: 6.0+ KB
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Split data into train and test data</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">42</span><span class="p">)</span>
 </pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -933,20 +927,6 @@ memory usage: 6.0+ KB
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
               
             
           </div>
